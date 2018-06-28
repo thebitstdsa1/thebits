@@ -17,7 +17,7 @@ pipeline {
           }
      }
      
-     stage('SonarQube') {
+     /*stage('SonarQube') {
      	steps {
         	//echo 'hola'//
             bat 'mvn sonar:sonar \
@@ -25,7 +25,7 @@ pipeline {
 				  -Dsonar.host.url=https://sonarcloud.io \
 				  -Dsonar.login=8f6c4c5f2a12700c06ec5cc796631d050284f6bd'    
           }
-      }
+      }*/
 
     
     stage('Deploy'){
