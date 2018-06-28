@@ -7,28 +7,26 @@ pipeline {
         echo 'Revisando modificaciones en el repositorio'
         checkout scm
       }
-    }
+    }  
     
-    stage('Run Tests'){
-      parallel {  
-        stage('Unit Test') {
-          steps {
-            echo 'Corriendo los tests con maven'
+    stage('Unit Test') {
+    	steps {
+        	echo 'Corriendo los tests con maven'
             slackSend (channel: '#presentacion-tdsa', color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.RUN_DISPLAY_URL})")
             bat 'mvn clean test'
           }
-        }
-        stage('SonarQube') {
-          steps {
-            echo 'hola'//
+     }
+     
+     stage('SonarQube') {
+     	steps {
+        	echo 'hola'//
             bat 'mvn sonar:sonar \
-                  -Dsonar.organization=gabrielbd-github \
+                  -Dsonar.organization=thebitstdsa1-github \
                   -Dsonar.host.url=https://sonarcloud.io \
-                  -Dsonar.login=0a2bedb909edab1cd8189565b99799c7f0161b8e'
+                  -Dsonar.login=d8dc1e9e67056bc3e9372f09d6f1c30546819497'
           }
-        }
       }
-    }
+
     
     stage('Deploy'){
       steps {
