@@ -28,7 +28,7 @@ public class Calculadora {
 		this.operadores = new ArrayList<String>();
 		
 		this.setOperadores("SUMA");
-		//this.setOperadores("MULTIPLICACION");		
+		this.setOperadores("MULTIPLICACION");		
 	}
 	
 }

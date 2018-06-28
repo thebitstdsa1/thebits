@@ -8,7 +8,7 @@ class MultiplicarTest {
 
 	@Test
 	void testMultiplicar() {
-		//fail("Not yet implemented");//hola
+		//fail("Not yet implemented");
 	}
 	
 }
