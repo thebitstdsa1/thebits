@@ -13,7 +13,7 @@ class MultiplicarTest {
 	
 	@Test //debe fallar pq esta enviando 2*3 y tiene que dar 6
 	void testDebeFallar() {
-		Calculadora test = new Calculadora();
+		Calculadora test = new Calculadora();//new
 		assertNotEquals(4, test.multiplicar(2, 3), "multiplicar(2,3) debe dar 6");
 	}
 	
