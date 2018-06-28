@@ -5,7 +5,7 @@ pipeline {
     stage('Github Checkout') {
       steps {
         echo 'Revisando modificaciones en el repositorio'
-        //checkout scm
+        //checkout scm//sdf
       }
     }  
     
