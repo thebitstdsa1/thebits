@@ -12,7 +12,7 @@ public class Calculadora {
 	}
 	
 	public int multiplicar(int a, int b) {
-		return a*a;
+		return a*a;//hola
 	}
 	
 	
