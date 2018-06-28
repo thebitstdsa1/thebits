@@ -23,7 +23,7 @@ pipeline {
             bat 'mvn sonar:sonar \
                   -Dsonar.organization=thebitstdsa1-github \
                   -Dsonar.host.url=https://sonarcloud.io \
-                  -Dsonar.login=presentacion'
+                  -Dsonar.login=ca7c462bf9f157bb421ee47cef39e9b0e489a5a2'
           }
       }
 
