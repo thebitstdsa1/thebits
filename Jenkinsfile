@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     
-    stage('Github Checkout') {
+    stage('Github Check Commit') {
       steps {
         echo 'Revisando modificaciones en el repositorio'
         //checkout scm//sdf
@@ -19,11 +19,11 @@ pipeline {
      
      stage('SonarQube') {
      	steps {
-        	echo 'hola'//
+        	//echo 'hola'//
             bat 'mvn sonar:sonar \
-                  -Dsonar.organization=thebitstdsa1-github \
-                  -Dsonar.host.url=https://sonarcloud.io \
-                  -Dsonar.login=ca7c462bf9f157bb421ee47cef39e9b0e489a5a2'    
+				  -Dsonar.organization=thebitstdsa1-github \
+				  -Dsonar.host.url=https://sonarcloud.io \
+				  -Dsonar.login=8f6c4c5f2a12700c06ec5cc796631d050284f6bd'    
           }
       }
 
